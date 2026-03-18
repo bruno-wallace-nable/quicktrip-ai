@@ -1,79 +1,88 @@
 # ✈️ QuickTrip AI
 
-Um assistente inteligente que cria roteiros de viagem personalizados em tempo real usando Inteligência Artificial.
+An AI-powered travel planner built with Ruby on Rails that generates personalized itineraries through a real-time chat experience.
 
-👉 https://quicktrip-ai-rdf-0c5d170d4599.herokuapp.com/
+QuickTrip AI allows users to create trips and interact with an AI assistant that dynamically generates travel plans using streaming responses and background processing.
 
----
-
-## 📸 Preview
-
-![Home](./docs/screencapture_quicktrip-ai-01-home.png)
-![Chat vazio](./docs/screencapture_quicktrip-ai-03-before-creating-trip.png)
-![Loading](./docs/screencapture_quicktrip-ai-05-waiting-trip-created.png)
-![Resposta](./docs/screencapture_quicktrip-ai-06-after-creating-trip.png)
+🔗 Live Demo: https://quicktrip-ai-53d7a1d73f9b.herokuapp.com/
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Overview
 
-- Criação de roteiros de viagem com IA
-- Chat em tempo real
-- Atualização automática da interface (sem refresh)
-- Feedback visual durante processamento ("Um momento...")
-- Histórico de conversas
-- Autenticação de usuários
+Planning a trip can be time-consuming and overwhelming. QuickTrip AI simplifies this process by combining artificial intelligence with a smooth, real-time chat interface.
+
+Users can create a trip, describe their preferences, and receive a personalized itinerary generated asynchronously, with responses streamed directly into the interface.
+
+This project was designed to simulate a real-world SaaS product, focusing on performance, user experience, and scalable architecture.
 
 ---
 
-## 🧰 Tecnologias utilizadas
+## ✨ Features
 
-- Ruby on Rails 8
-- Hotwire (Turbo + Stimulus)
+- 🤖 AI-generated travel itineraries
+- 💬 Real-time chat interface
+- ⚡ Streaming responses (Turbo Streams)
+- 🔄 Asynchronous processing with background jobs
+- 🧠 Context-aware AI prompts
+- 🔐 User authentication
+- 🗂️ Trip history and persistence
+- 📱 Responsive UI
+
+---
+
+## 🛠 Tech Stack
+
+**Backend**
+- Ruby on Rails
+- PostgreSQL / SQLite
+- Active Job
+
+**Frontend**
+- Turbo (Hotwire)
+- Stimulus.js
+- HTML / CSS
+
+**Real-time**
 - ActionCable (WebSockets)
-- SolidCable + SolidQueue
-- PostgreSQL
+- Turbo Streams
+
+**AI Integration**
+- OpenAI API
+
+**Deployment**
 - Heroku
-- OpenAI API (via RubyLLM)
 
 ---
 
-## 🧩 Arquitetura
+## 🧱 Architecture
 
-O sistema utiliza:
+The application follows a standard Rails MVC structure enhanced with real-time and asynchronous capabilities:
 
-- **Turbo Streams** para atualizar o chat em tempo real
-- **ActionCable** para comunicação via WebSocket
-- **Stimulus** para controle da interface e UX
-- **Background Jobs** para processamento assíncrono das respostas da IA
+- **Turbo Streams** handle real-time UI updates
+- **ActionCable** enables WebSocket-based communication
+- **Background jobs** process AI responses without blocking the UI
+- **Stimulus controllers** manage frontend interactivity
 
----
-
-## ⚡ Destaques técnicos
-
-- Chat em tempo real construído com Rails puro (sem React)
-- Streaming de resposta da IA token por token
-- UX com loading imediato (thinking bubble)
-- Separação clara entre frontend, backend e processamento assíncrono
-- Deploy completo em produção com Heroku
+This architecture allows the app to deliver a smooth, responsive chat experience while handling potentially slow AI responses in the background.
 
 ---
 
-## 🧠 Aprendizados
+## ⚙️ How It Works
 
-- Implementação de Turbo Streams em produção
-- Debug de erros em ambiente Heroku
-- Diferença entre jobs síncronos e assíncronos
-- Controle de estado com Stimulus
-- Integração de IA em aplicações Rails
+1. The user creates a new trip
+2. A chat session is initialized
+3. The user sends a message describing the desired itinerary
+4. A background job sends the request to the AI
+5. The AI response is processed asynchronously
+6. The response is streamed back into the chat interface in real time
 
 ---
 
-## 🔧 Rodando localmente
+## 🧪 Setup Instructions
+
+### Clone the repository
 
 ```bash
-git clone https://github.com/robertodefarias/Quick.git
-cd Quick
-bundle install
-rails db:create db:migrate
-rails s
+git clone https://github.com/robertodefarias/quicktrip-ai.git
+cd quicktrip-ai
