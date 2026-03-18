@@ -1,0 +1,84 @@
+<div class="container py-5">
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Meus Roteiros</h1>
+
+    <%= link_to "Novo Roteiro",
+        new_trip_path,
+        class: "btn btn-primary" %>
+  </div>
+
+  <% if @trips.any? %>
+
+    <div class="row">
+
+      <% @trips.each do |trip| %>
+
+        <div class="col-md-4 mb-4">
+
+          <div class="card trip-card shadow-sm h-100 bg-white border-0">
+
+            <div class="card-body">
+
+              <h5 class="card-title">
+                📍 <%= trip.city %>
+              </h5>
+
+              <p class="card-text text-muted">
+                <%= truncate(trip.content, length: 80) %>
+              </p>
+
+              <div class="d-flex justify-content-between">
+
+                <%= link_to "Abrir Chat",
+                    chats_path(chat: { trip_id: trip.id }),
+                    data: { turbo_method: :post },
+                    class: "btn btn-outline-primary btn-sm" %>
+
+                <%= button_to trip_path(trip),
+                    method: :delete,
+                    data: { turbo_confirm: "Deletar esta viagem ?" },
+                    class: "btn btn-outline-danger btn-sm" do %>
+
+                  <i class="bi bi-trash"></i>
+
+                <% end %>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      <% end %>
+
+    </div>
+
+  <% else %>
+
+    <div class="empty-state text-center py-5">
+
+      <div style="font-size:60px;">
+        ✈️
+      </div>
+
+      <h3 class="mt-3">
+        Nenhuma viagem encontrada
+      </h3>
+
+      <p class="text-muted">
+        Comece a planejar sua primeira viagem com a ajuda da IA
+      </p>
+
+      <%= link_to "Criar viagem",
+          new_trip_path,
+          class: "btn btn-primary mt-3" %>
+
+    </div>
+
+  <% end %>
+
+</div>
+

@@ -1,0 +1,19 @@
+<nav class="quicktrip-navbar">
+  <div class="container-fluid quicktrip-navbar-container">
+
+    <%= link_to root_path, class: "quicktrip-navbar-brand" do %>
+      <%= image_tag "logo_quicktrip.png", alt: "QuickTrip", class: "quicktrip-navbar-logo" %>
+    <% end %>
+
+    <div class="quicktrip-navbar-actions">
+      <% if user_signed_in? %>
+        <%= link_to "Meus roteiros", trips_path, class: "btn btn-outline-primary quicktrip-navbar-btn" %>
+        <%= link_to "Sair", destroy_user_session_path, data: { turbo_method: :delete }, class: "btn btn-dark quicktrip-navbar-btn" %>
+      <% else %>
+        <%= link_to "Entrar", new_user_session_path, class: "btn btn-outline-primary quicktrip-navbar-btn" %>
+        <%= link_to "Criar conta", new_user_registration_path, class: "btn btn-primary quicktrip-navbar-btn" %>
+      <% end %>
+    </div>
+
+  </div>
+</nav>
