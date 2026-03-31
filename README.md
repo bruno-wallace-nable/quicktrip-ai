@@ -108,48 +108,9 @@ The application follows a standard **Rails MVC** structure enhanced with real-ti
 - PostgreSQL (or SQLite for development)
 - OpenAI API key
 
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/robertodefarias/quicktrip-ai.git
-cd quicktrip-ai
-
-# Install dependencies
-bundle install
-
-# Setup environment variables
-cp .env.example .env
-# Edit .env and add your OpenAI API key
-
-# Setup the database
-rails db:create db:migrate
-
-# Run the server
-rails server
-```
-The application will be available at:
-
-👉 http://localhost:3000
-
 ---
-
-## 📸 Screenshots
-
-<div align="center">
-
-| Feature | Preview |
-|:-------:|:-------:|
-| **Homepage** | *Coming soon* |
-| **Trip Creation** | *Coming soon* |
-| **Chat Interface** | *Coming soon* |
-| **AI Streaming** | *Coming soon* |
 
 </div>
-
-> 🚧 Screenshots will be added in the next release.
-
----
 
 ## 🧠 Challenges & Learnings
 
@@ -162,33 +123,3 @@ This project provided hands-on experience with:
 - Integrating third-party APIs into a Rails application
 - Managing state and UI updates without page reloads
 
----
-
-## 🔮 Future Improvements
-
-- 🌍 Multilingual support (English / Portuguese)
-- 📍 Integration with maps and location APIs
-- 🧳 Save and export itineraries
-- 🧠 Improved AI personalization
-- 📊 User analytics dashboard
-- 💳 Payment integration for premium features
-
----
-
-## 👨‍💻 Author
-
-**Roberto de Farias**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/robertodefarias)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/robertodefarias)
-
-Originally developed as part of a collaborative bootcamp project and later independently refined, documented, and extended for portfolio presentation.
-
----
-
-## 📄 License
-
-This project is protected under an "All Rights Reserved" license.
-
-The code is publicly available for viewing and portfolio purposes only.  
-No reuse, distribution, or modification is allowed without explicit permission.
