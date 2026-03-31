@@ -9,23 +9,6 @@ AI-powered travel planner built with Ruby on Rails, featuring real-time chat, st
 
 Users can create trips and interact with an AI assistant that dynamically generates personalized travel plans with real-time streaming and background processing.
 
-🔗 **Live Demo:** [https://quicktrip-ai-53d7a1d73f9b.herokuapp.com/](https://quicktrip-ai-53d7a1d73f9b.herokuapp.com/)
-
----
-
-## 📋 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Architecture](#-architecture)
-- [How It Works](#-how-it-works)
-- [Setup Instructions](#-setup-instructions)
-- [Screenshots](#-screenshots)
-- [Challenges & Learnings](#-challenges--learnings)
-- [Future Improvements](#-future-improvements)
-- [Author](#-author)
-
 ---
 
 ## 🚀 Overview
@@ -99,16 +82,19 @@ The application follows a standard **Rails MVC** structure enhanced with real-ti
 
 ---
 
-## 🧪 Setup Instructions
+👥 Team
 
-### Prerequisites
+👨‍💻 Roberto de Farias 👉 https://github.com/robertodefarias
 
-- Ruby 3.2+
-- Rails 7.0+
-- PostgreSQL (or SQLite for development)
-- OpenAI API key
+👨‍💻 Pedro Abreu 👉 https://github.com/peedroabreu
+
+👨‍💻 Bruno Wallace Nable 👉 https://github.com/bruno-wallace-nable
 
 ---
+
+🚧 Status
+
+Deployed in https://quicktrip-ai-rdf-0c5d170d4599.herokuapp.com
 
 </div>
 
